@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="form-area">
+        <form action="" #f='ngForm' (submit)="OnSubmit(f)">
+            <div class="form-group">
+                <label>Name</label>
+                <input type=" text"
+                 placeholder="name" 
+                 class="form-control"
+                 name="fullName"
+                 ngModel
+                 #fullNameInput='ngModel'
+                 (change)="getValue(fullNameInput.value)"
+                 required>
+                 <div *ngIf="fullNameInput?.errors?.['required']">
+                    <div class="alert alert-danger" *ngIf="fullNameInput.touched && fullNameInput.invalid"> Obavezno polje</div>
+                </div>
+            </div>
+          
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" 
+                placeholder="email"
+                class="form-control"
+                name="email"
+                ngModel
+                #emailInput='ngModel'
+                (change)="getValueE(emailInput.value)"
+                required>
+                <div class="alert alert-danger" *ngIf="emailInput.touched && emailInput.invalid"> Obavezno polje</div>
+
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" 
+                placeholder="password" 
+                class="form-control"
+                name="password"
+                ngModel
+                #passwordInput='ngModel'
+                (change)="getValueP(passwordInput.value)"
+                required>
+                <div class="alert alert-danger" *ngIf="passwordInput.touched &&  passwordInput.invalid"> Obavezno polje</div>
+
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid"> Submit</button>
+        </form>
+    </div>
+</div>
