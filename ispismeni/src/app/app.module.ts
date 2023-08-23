@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomvalidatorComponent } from './customvalidator/customvalidator.component';
+import { VezbanjeComponent } from './vezbanje/vezbanje.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PipePipe,
     TemplatedrivenformComponent,
     ReactiveformComponent,
+    CustomvalidatorComponent,
+    VezbanjeComponent,
   ],
   imports: [
     BrowserModule,
