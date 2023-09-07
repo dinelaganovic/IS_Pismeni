@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pismeni_Bekend.props" />
+</Project>
