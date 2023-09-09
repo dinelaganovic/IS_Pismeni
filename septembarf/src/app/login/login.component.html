@@ -1,1 +1,9 @@
-<p>login works!</p>
+<div class="form-area">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label for="email">Email:</label>
+        <input type="text" id="email" formControlName="email" placeholder="email" class="form-control">
+        <label for="password">Lozinka:</label>
+        <input type="password" id="password" formControlName="password" placeholder="lozinka" class="form-control">
+        <button type="submit" class="btn btn-dark">Prijavi se</button>
+    </form>
+</div>
