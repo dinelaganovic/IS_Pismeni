@@ -12,7 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(option =>
 option.UseSqlServer(
-    builder.Configuration.GetConnectionString("SqlServerConnString"))); var app = builder.Build();
+    builder.Configuration.GetConnectionString("SqlServerConnString"))); 
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
