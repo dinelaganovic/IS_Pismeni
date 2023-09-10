@@ -8,12 +8,16 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChildComponent } from './child/child.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ChildComponent,
+    HomeComponent
   ],
   imports: [
     //sto mora da se importa

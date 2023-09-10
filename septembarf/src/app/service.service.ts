@@ -7,21 +7,11 @@ import { throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceService {
-  private baseUrl = "https://localhost:7108/api/Vaspitacica";
+  private baseUrl:string = "https://localhost:7108/api/Vaspitacica/authenticate";
 
   constructor(private http: HttpClient) { }
-
-  login(loginObj: any) {
+  login(loginObj:any){
     return this.http.post<any>(this.baseUrl, loginObj)
-      .pipe(
-        catchError(this.handleError) // Dodaj obradu grešaka
-      );
-  }
-
-  private handleError(error: HttpErrorResponse) {
-    // Ovde možete obraditi grešku, npr. logirati je ili prikazati korisniku
-    console.error('An error occurred:', error.error);
-    return throwError('Something went wrong. Please try again later.');
   }
 }
 
