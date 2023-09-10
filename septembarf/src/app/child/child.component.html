@@ -1,0 +1,14 @@
+<p>child works!</p>
+<form [formGroup]="childForm" (ngSubmit)="onSubmit()">
+    <label for="firstName">Ime:</label>
+    <input type="text" id="firstName" formControlName="firstName">
+  
+    <label for="lastName">Prezime:</label>
+    <input type="text" id="lastName" formControlName="lastName">
+  
+    <label for="age">Godine (2-5):</label>
+    <input type="number" id="age" formControlName="age">
+  
+    <button type="submit" [disabled]="childForm.invalid">Sačuvaj Dete</button>
+  </form>
+  
