@@ -16,7 +16,7 @@ namespace Septembar.Controllers
         {
             this.appDbContext = appDbContext;
         }
-        [HttpPost]
+        [HttpPost("authenticate")]
         public async Task<IActionResult> login([FromBody] Vaspitacica vaspitacica)
         {
             var user= await appDbContext.vaspitacice.FirstOrDefaultAsync(x=>x.Email == vaspitacica.Email && x.Password==vaspitacica.Password);
