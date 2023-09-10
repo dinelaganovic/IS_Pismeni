@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChildComponent } from './child/child.component';
 import { HomeComponent } from './home/home.component';
+import { PipePipe } from './pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     DashboardComponent,
     ChildComponent,
-    HomeComponent
+    HomeComponent,
+    PipePipe
   ],
   imports: [
     //sto mora da se importa

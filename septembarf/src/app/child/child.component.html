@@ -8,7 +8,16 @@
   
     <label for="age">Godine (2-5):</label>
     <input type="number" id="age" formControlName="age">
-  
+    <p class="card-text">Dostupne uciteljice:</p>
+    <select formControlName="uciteljice"  style="width: 300px;" required>
+      <option [ngValue]="null" disabled>sve uciteljice</option>
+      <ng-container *ngFor="let rt of ucit">
+        <ng-container *ngIf="rt.childrenCount<30">
+            <option  style="color: black;" *ngFor="let rt of  ucit" [ngValue]="rt.id">{{rt.firstName}}</option>
+        </ng-container>
+    </ng-container>
+    </select>
+
     <button type="submit" [disabled]="childForm.invalid">Sačuvaj Dete</button>
   </form>
   
