@@ -1,0 +1,37 @@
+<div id="dodaj">
+  <form [formGroup] = 'form' (submit)="onSubmit()">
+    <div>
+      <label><h2>Tip aktivnosti</h2></label>
+      <select formControlName="tip">
+        <option>Studiranje</option>
+        <option>Rekreacija</option>
+      </select>
+    </div>
+
+    <div>
+      <label><h2>Opis aktivnosti</h2></label>
+      <select formControlName="opis">
+        <option>Zavrsena</option>
+        <option>Nije zavrsena</option>
+      </select>
+    </div>
+
+    <div>
+      <label><h2>Prioritet(1-5)</h2></label>
+      <input type="number" placeholder="Odaberi(1-5)" formControlName="prioritet">
+    </div>
+
+    <div>
+      <label><h2>Datum</h2></label>
+      <input type="date" formControlName="datum">
+    </div>
+
+    <div>
+      <label><h2>Vreme</h2></label>
+      <input type="time" formControlName="vreme">
+    </div>
+
+    <button type="submit" style="margin-top: 20px;">Potvrdi</button>
+
+  </form>
+</div>

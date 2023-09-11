@@ -32,10 +32,14 @@ namespace Septembar.Controllers
             await appDbContext.SaveChangesAsync();
            return BadRequest();
         }
+       // [HttpGet("{imev}")]
+       // public async Task<IEnumerable<Deca>> GetDeca(string imev)
+       // {
+      //      return await _appdb.deca.Where(x => x.vaspitacicap == imev || x.vaspitacicad == imev).ToListAsync();
+      //  }
 
-
-    // Metoda za dobijanje svih vaspitačica
-    [HttpGet]
+        // Metoda za dobijanje svih vaspitačica
+        [HttpGet]
     public async Task<IActionResult> GetVaspitacice()
     {
         var vaspitacice = await appDbContext.vaspitacice.ToListAsync();

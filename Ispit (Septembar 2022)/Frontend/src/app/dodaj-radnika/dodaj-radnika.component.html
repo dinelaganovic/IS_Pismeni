@@ -1,0 +1,30 @@
+<div style="padding: 10px;">
+  <form [formGroup]="forma" (submit)="onSubmit()">
+    <div>
+      <label>Ime:</label><br>
+      <input type="text"  formControlName="ime">
+    </div>
+
+    <div>
+      <label>Prezime:</label><br>
+      <input type="text" formControlName ="prezime">
+    </div>
+
+    <div>
+      <label>Broj telefona:</label><br>
+      <input type="text" formControlName="telefon">
+    </div>
+
+    <div>
+      <label>Datum postavljanja: </label><br>
+      <input type="date" formControlName="datum">
+    </div>
+
+    <div>
+      <label>Plata: </label><br>
+      <input type="text" formControlName="plata">
+    </div><br>
+
+    <button type="submit" style="cursor: pointer;">Potvrdi formu</button>
+  </form>
+</div>
