@@ -1,0 +1,22 @@
+<div class="containter mt-5">
+    <div class="form-area">
+        <form [formGroup]="form" (ngSubmit)="sacuvaj()">
+            <div class="form-group">
+            <label for="grad_polazak">Grad iz koga polazite:</label>
+            <input type="text" id="grad_polazak" name="grad_polazak" formControlName="grad_polazak" class="form-control">
+            <div   *ngIf="grad_polazak.touched &&  grad_polazak.invalid">
+            <div class="alert alert-danger" *ngIf=" grad_polazak.errors?.['required']"> Obavezno polje</div>
+            </div>
+            </div>
+            <label for="grad_odrediste">Grad u koji idete:</label>
+            <input type="text" id="grad_odrediste" name="grad_odrediste" formControlName="grad_odrediste" class="form-control">
+            <label for="datum">Datum polaska:</label>
+            <input type="date" id="datum" name="datum" formControlName="datum" class="form-control">
+            <label for="prevoznik">Prevoznik:</label>
+            <input type="text" id="prevoznik" name="prevoznik" formControlName="prevoznik" class="form-control">
+            <label for="kilometraza">Kilometraza:</label>
+            <input type="number" id="kilometraza" name="kilometraza" formControlName="kilometraza" class="form-control">
+            <button class="btn btn-primary" type="submit" [disabled]="form.invalid"> Sacuvaj polazak</button>
+        </form>
+    </div>
+</div>
