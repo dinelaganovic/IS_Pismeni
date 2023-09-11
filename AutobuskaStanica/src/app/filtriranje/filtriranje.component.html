@@ -1,0 +1,20 @@
+<div class="container mt-5">
+        <h1>Unesite podatke za pretrazivanje </h1>
+        <div class="form-area">
+            <form [formGroup]="form"  (ngSubmit)="pretrazi()">
+                <input type="text" id="prevoznik"  name="prevoznik" class="form-control" formControlName="prevoznik" placeholder="prevoznik">
+                <input type="text" id="grad_polazak" class="form-control"  name="grad_polazak" formControlName="grad_polazak" placeholder="grad_polazak">
+                <input type="text" id="grad_odrediste" class="form-control"  name="grad_odrediste" formControlName="grad_odrediste" placeholder="grad_odrediste">
+                <button class="btn btn-primary" type="submit"> pretrazi</button>
+            </form>
+        </div>
+    <ul class="list-group" *ngFor="let item of niz1">
+        <li class="list-group-item">{{item.prevoznik}}{{item.kilometraza}}</li>
+    </ul>
+    <ng-container *ngIf="isDivVisible">
+        <ul class="list-group" *ngFor="let item of niz">
+            <li class="list-group-item">{{item.prevoznik}}{{item.kilometraza}}</li>
+        </ul>
+    </ng-container>
+    
+</div>
