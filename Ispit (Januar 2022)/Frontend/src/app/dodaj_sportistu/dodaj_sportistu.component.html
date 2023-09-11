@@ -1,0 +1,36 @@
+<div>
+  <form [formGroup]="forma" (submit)="onSubmit()">
+    <div>
+      <label>Ime: </label><br>
+      <input type="text" formControlName="ime">
+    </div>
+
+    <div>
+      <label>Prezime: </label><br>
+      <input type="text" formControlName="prezime">
+    </div>
+
+    <div>
+      <label>Broj telefona: </label><br>
+      <input type="text" formControlName="telefon">
+    </div>
+
+    <div>
+      <label>Godina rodjenja: </label><br>
+      <input type="text" formControlName="godina">
+    </div>
+
+    <div>
+      <label>Grad: </label><br>
+      <input type="text" formControlName="grad">
+    </div>
+
+    <div>
+      <label>Plata: </label><br>
+      <input type="text" formControlName="plata">
+    </div>
+
+    <button type="submit">Potvrdi</button>
+
+  </form>
+</div>

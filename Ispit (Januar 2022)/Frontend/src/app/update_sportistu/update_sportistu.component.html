@@ -1,0 +1,36 @@
+<div>
+  <a [routerLink]="['/']">Vrati se nazar na listu</a>
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <div>
+      <label>Ime: </label><br>
+      <input type="text" formControlName="ime">
+    </div>
+
+    <div>
+      <label>Prezime: </label><br>
+      <input type="text" formControlName="prezime">
+    </div>
+
+    <div>
+      <label>Broj telefona: </label><br>
+      <input type="text" formControlName="br_tel">
+    </div>
+
+    <div>
+      <label>Godina rodjenja: </label><br>
+      <input type="text" formControlName="god_rodj">
+    </div>
+
+    <div>
+      <label>Grad: </label><br>
+      <input type="text" formControlName="grad">
+    </div>
+
+    <div>
+      <label >Plata: </label><br>
+      <input type="text" formControlName="plata">
+    </div>
+
+    <button type="submit">Update</button>
+  </form>
+</div>

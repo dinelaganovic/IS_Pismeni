@@ -1,0 +1,24 @@
+<div>
+  <table>
+    <tr>
+      <td>Ime</td>
+      <td>Prezime</td>
+      <td>Broj telefona</td>
+      <td>Godina rodjenja</td>
+      <td>Grad</td>
+      <td>Plata</td>
+      <td>Klub</td>
+      <td>Update</td>
+    </tr>
+    <tr *ngFor="let sportista of sportiste">
+      <td>{{sportista.ime}}</td>
+      <td>{{sportista.prezime}}</td>
+      <td>{{sportista.br_tel}}</td>
+      <td>{{sportista.god_rodj}}</td>
+      <td>{{sportista.grad}}</td>
+      <td>{{sportista.plata}}</td>
+      <td>{{sportista.klub}}</td>
+      <td><button [routerLink]="['/update',sportista.id]">Update</button></td>
+    </tr>
+  </table>
+</div>

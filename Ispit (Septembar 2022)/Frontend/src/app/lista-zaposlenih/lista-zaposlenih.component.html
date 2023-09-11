@@ -1,0 +1,27 @@
+<div>
+  <select [(ngModel)]="selectedRadnoMesto" (ngModelChange)="onChange()">
+    <option value="Doktor">Doktor</option>
+    <!-- Dodajte više opcija ovdje -->
+</select>
+<button  (click)="onReset()">Reset</button>
+
+
+  <table>
+    <tr>
+      <td>Ime: </td>
+      <td>Prezime: </td>
+      <td>Broj telefona: </td>
+      <td>Datum postavljanja na radno mesto:</td>
+      <td>Plata</td>
+      <td>Radno mesto</td>
+    </tr>
+    <tr *ngFor="let radnik of radnici">
+      <td>{{radnik.ime}} </td>
+      <td>{{radnik.prezime}} </td>
+      <td>{{radnik.telefon}}</td>
+      <td>{{radnik.datum}}</td>
+      <td>{{radnik.plata}}</td>
+      <td>{{radnik.imeRadnogMesta}}</td>
+    </tr>
+  </table>
+</div>

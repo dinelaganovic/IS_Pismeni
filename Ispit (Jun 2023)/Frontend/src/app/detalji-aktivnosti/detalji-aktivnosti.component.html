@@ -1,0 +1,26 @@
+<div style="padding: 50px; ">
+  <div style="margin-bottom: 20px;"><a [routerLink]="['/']">Nazad na listu aktivnosti</a></div>
+
+  <table *ngIf="aktivnost">
+    <tr>
+      <td>Tip: </td>
+      <td>{{aktivnost.tip}}</td>
+    </tr>
+    <tr>
+      <td>Opis: </td>
+      <td>{{aktivnost.opis}}</td>
+    </tr>
+    <tr>
+      <td>Prioritet (1-5): </td>
+      <td>{{aktivnost.prioritet}}</td>
+    </tr>
+    <tr>
+      <td>Datum: </td>
+      <td>{{aktivnost.datum}}</td>
+    </tr>
+    <tr>
+      <td>Vreme: </td>
+      <td>{{aktivnost.vreme}}</td>
+    </tr>
+  </table>
+</div>

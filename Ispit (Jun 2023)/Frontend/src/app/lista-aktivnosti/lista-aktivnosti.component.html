@@ -1,0 +1,22 @@
+<div id="prvi">
+  <h1>Liste aktivnosti</h1><hr>
+
+  <div>
+    <h2>Lista aktivnosti vezana za studiranje</h2>
+    <ul *ngFor="let aktivnost of aktivnosti" >
+        <li *ngIf="aktivnost.tip == 'Studiranje'" [style.color]="aktivnost.datum | pipe_promena_boje">{{ aktivnost.opis }}</li>
+        <li *ngIf="aktivnost.tip == 'Studiranje'"><button (click)="updateOpis(+aktivnost.id!, aktivnost.datum)">Ažuriraj</button></li>
+        <li *ngIf="aktivnost.tip == 'Studiranje'"><a [routerLink]="['/detalji_aktivnosti', aktivnost.id]">Više</a></li>
+    </ul>
+
+  </div>
+  <hr>
+  <div>
+    <h2>Lista aktivnosti vezana za rekreaciju</h2>
+    <ul *ngFor="let aktivnost of aktivnosti" >
+        <li *ngIf="aktivnost.tip == 'Rekreacija'" [style.color]="aktivnost.datum | pipe_promena_boje">{{ aktivnost.opis }}</li>
+        <li *ngIf="aktivnost.tip == 'Rekreacija'"><button (click)="updateOpisRekreacije(+aktivnost.id!, aktivnost.datum)">Ažuriraj</button></li>
+        <li *ngIf="aktivnost.tip == 'Rekreacija'"><a [routerLink]="['/detalji_aktivnosti', aktivnost.id]">Više</a></li>
+    </ul>
+  </div>
+</div>
