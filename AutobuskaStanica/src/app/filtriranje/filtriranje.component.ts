@@ -25,11 +25,6 @@ ngOnInit(): void {
      this.niz=res 
     }
   )
-  this.service.pretrazi("","","").subscribe(
-    res=>{
-     this.niz1=res 
-    }
-  )
 }
 
 pretrazi(){
