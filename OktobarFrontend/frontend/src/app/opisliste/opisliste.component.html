@@ -1,0 +1,11 @@
+<p>{{id}}</p>
+<div class="container mt-5">
+    <ng-container *ngFor="let item of detaljiliste">
+        <ng-container *ngIf="item.id==id">
+            <ul class="list-group">
+                <li class="list-group-item">ID:{{item.id}} TIP:{{item.tip}} OPIS:{{item.opis}} PRIORITET:{{item.prioritet}} DATUM:{{item.datum}} VREME:{{item.vreme}}</li>
+            </ul>        
+        </ng-container>
+    </ng-container>
+
+</div>

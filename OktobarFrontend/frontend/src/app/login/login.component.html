@@ -1,0 +1,10 @@
+<h1>Unesite sva polja</h1>
+<div class="form-area">
+    <form [formGroup]="form" (ngSubmit)="OnSubmit()">
+        <label for="Email">Unesite email:</label>
+        <input type="text" id="Email" name="Email" formControlName="Email" class="form-control">
+        <label for="Password">Unesite sifru:</label>
+        <input type="text" id="Password" name="Password" formControlName="Password" class="form-control">
+        <button type="submit" class="btn btn-dark"> Prijavi se</button>
+    </form>
+</div>
